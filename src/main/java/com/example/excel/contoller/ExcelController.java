@@ -22,8 +22,11 @@ public class ExcelController {
         /**
          * excel sheet 생성
          */
+        System.out.println("위");
         Workbook workbook = new XSSFWorkbook();
+        System.out.println("아래");
         Sheet sheet = workbook.createSheet("Sheet1"); // 엑셀 sheet 이름
+        System.out.println("위위아래");
         sheet.setDefaultColumnWidth(28); // 디폴트 너비 설정
 
         /**
