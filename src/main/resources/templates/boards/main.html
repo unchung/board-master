@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html xmlns xmlns:th="http://www.w3.org/1999/xhtml" : th="http://www.thymeleaf.org">
+<head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div class="container">
+    <table class="table table-hover">
+        <thead>
+        <th>글번호</th>
+        <th>작성자</th>
+        <th>제목</th>
+        <th>조회수</th>
+        </thead>
+        <tr th:each="list :${list}">
+            <td>[[${list.boardId}]]</td>
+            <td>[[${list.name}]]</td>
+            <td>
+            <a th:href="@{/board/view(boardId=${list.boardId})}">
+                [[${list.title}]]
+            </a>
+            </td>
+            <td>[[${list.read}]]</td>
+        </tr>
+    </table>
+</div>
+</body>
+</html>
